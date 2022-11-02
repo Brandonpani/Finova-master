@@ -1,0 +1,610 @@
+#main-index {
+    position: relative;
+
+    .leyenda {
+        @include container;
+        position: relative;
+        min-height: 30vh;
+        display: grid;
+        font-size: 1.25rem;
+        padding: 4rem 2rem 6rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        margin-block: 3rem;
+        color: $black;
+
+        .section-subtitle {
+            color: $clr-dark-gray;
+        }
+
+        p {
+            width: 60%;
+        }
+
+        .label {
+            position: absolute;
+            background-color: #1a73e8;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            padding-inline-start: 1.5rem;
+            padding-block: 1rem;
+            color: #f5f5f5;
+        }
+
+        .labelDos {
+            position: absolute;
+            background-color: #1a73e8;
+            left: 0;
+            bottom: 70%;
+            // transform: translateY(-50%);
+            z-index: 2;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            padding-inline-start: 1.5rem;
+            padding-block: 1rem;
+            color: #f5f5f5;
+        }
+
+    }
+
+
+    #servicios {
+        // height: 150vh;
+
+        .top {
+            background-color: $black;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            // background-image: linear-gradient(#f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-productos-woman-working-on-a-laptop.jpg);
+            // background-size: cover;
+            // background-position: 50% center;
+            // height: 100vh;
+
+            // align-items: flex-end;
+
+            .top__container {
+                width: 100%;
+                @include container;
+                display: grid;
+                place-content: center;
+                margin-block-end: 3rem;
+                padding-block: 3rem;
+
+
+                .top-info {
+                    // height: 100%;
+
+                    .img {
+                        width: 40%;
+                        height: 15rem;
+                        border-radius: .5rem;
+                        background-color: $orange;
+                        margin-block-end: 2rem;
+                    }
+
+                    .section-subtitle {
+                        color: whitesmoke;
+                        font-size: 2.3rem;
+                    }
+
+                    .p-large {
+                        color: whitesmoke;
+                        font-weight: 300;
+                    }
+
+                    .cta-productos {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            // outline: 1px solid red;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            margin-block-end: 5rem;
+
+            .subtitle {
+                @include container;
+                margin-block-start: 3rem;
+                font-size: 2.5rem;
+
+            }
+
+            .cards-container {
+                @include container;
+                margin-block-start: 3rem;
+                margin-block-end: 3rem;
+                background-color: #f5f5f5;
+                border-radius: .5rem;
+                box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+                padding: 2rem;
+
+                .cards-wrapper {
+
+                    .card {
+
+                        .card-title {
+                            margin-block-end: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media only screen and (min-width: $tablet) {
+        #productos {
+
+            .top {
+                padding-block-start: 7rem;
+                height: auto;
+                background-image: linear-gradient(to left, #f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-productos-woman-working-on-a-laptop.jpg);
+
+                .top__container {
+
+                    .top-info {
+                        width: 50%;
+
+                        .p-large {
+                            margin-block-end: 2rem;
+                        }
+
+                        .cta-productos {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                .cards-container {
+
+                    // @include container;
+                    .cards-wrapper {
+                        display: flex;
+                        gap: 2rem;
+                    }
+
+                    .cta-productos {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $laptop) {
+        #productos {
+
+            .top {
+                padding-block: 7rem;
+                height: auto;
+                background-image: linear-gradient(to left, #f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-productos-woman-working-on-a-laptop.jpg);
+                background-position: 75% center;
+
+                .top__container {
+                    height: 70%;
+
+                    .top-info {
+
+                        width: 60%;
+
+                        .section-subtitle {
+                            font-size: $section-title;
+                            line-height: 1.1;
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+
+                .cards-container {
+
+                    .cards-wrapper {
+                        display: flex;
+                        gap: 2rem;
+                    }
+
+                    .cta-productos {}
+                }
+            }
+        }
+    }
+
+    #regulacion {
+
+        .top {
+            background-image: linear-gradient(#f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-regulacion-mujer-firmando-documentos.jpg);
+            background-size: cover;
+            background-position: 50% 60%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            .top__container {
+                width: 100%;
+                @include container;
+                margin-block-end: 3rem;
+
+                .top-info {
+
+                    .section-subtitle {
+                        color: whitesmoke;
+                        font-size: 2.3rem;
+                    }
+
+                    .p-large {
+                        color: whitesmoke;
+                    }
+
+                    .cta-productos {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            @include container;
+            margin-block: 3rem;
+        }
+
+    }
+
+    @media only screen and (min-width: $tablet) {
+        #regulacion {
+
+            .top {
+                padding-block-start: 7rem;
+                height: auto;
+                background-image: linear-gradient(to left, #f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-regulacion-mujer-firmando-documentos.jpg);
+
+                .top__container {
+
+                    .top-info {
+                        width: 50%;
+
+                        .p-large {
+                            margin-block-end: 2rem;
+                        }
+
+                        .cta-productos {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                .cards-container {
+
+                    // @include container;
+                    .cards-wrapper {
+                        display: flex;
+                        gap: 2rem;
+                    }
+
+                    .cta-productos {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $laptop) {
+        #regulacion {
+
+            .top {
+                padding-block: 7rem;
+                height: auto;
+                background-image: linear-gradient(to left, #f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-regulacion-mujer-firmando-documentos.jpg);
+                background-position: 70% 50%;
+
+                .top__container {
+                    // width: 50%;
+                    height: 70%;
+                }
+            }
+
+            .bottom {
+
+                .cards-container {
+
+                    .cards-wrapper {
+                        display: flex;
+                        gap: 2rem;
+                    }
+
+                    .cta-productos {}
+                }
+            }
+        }
+    }
+
+    #automatizacion {
+
+        .top {
+            background-image: linear-gradient(#1111118c 40%, #5681e675 60%, ), url(../images/close-up-male-hands-using-laptop-home.jpg);
+            background-size: cover;
+            background-position: 35% center;
+
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            .top__container {
+                width: 100%;
+                @include container;
+                margin-block-end: 3rem;
+
+                .top-info {
+
+                    .section-subtitle {
+                        color: whitesmoke;
+                        font-size: 2.3rem;
+                    }
+
+                    .p-large {
+                        color: whitesmoke;
+                    }
+
+                    .cta-productos {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            @include container;
+            margin-block: 3rem;
+        }
+
+    }
+
+    @media only screen and (min-width: $tablet) {
+        #automatizacion {
+
+            .top {
+                padding-block-start: 7rem;
+                height: auto;
+                background-image: linear-gradient(to left, #f2f2f225 40%, #5681e675 60%, ), url(../images/close-up-male-hands-using-laptop-home.jpg);
+
+                .top__container {
+
+                    .top-info {
+                        width: 50%;
+
+                        .p-large {
+                            margin-block-end: 2rem;
+                        }
+
+                        .cta-productos {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                .cards-container {
+
+                    // @include container;
+                    .cards-wrapper {
+                        display: flex;
+                        gap: 2rem;
+                    }
+
+                    .cta-productos {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $laptop) {
+        #automatizacion {
+
+            .top {
+                padding-block: 7rem;
+                height: auto;
+                background-image: linear-gradient(to left, #f2f2f225 40%, #5681e675 60%, ), url(../images/close-up-male-hands-using-laptop-home.jpg);
+                background-position: 70% 40%;
+
+                .top__wrapper {
+                    width: 50%;
+                    height: 70%;
+                }
+            }
+
+            .bottom {
+
+                .cards-container {
+
+                    .cards-wrapper {
+                        display: flex;
+                        gap: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #innovacion {
+
+        .top {
+            background-image: linear-gradient(#f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-innovacion-hombre-trabajando-laptop.jpg);
+            background-size: cover;
+            background-position: 65% center;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            .top__container {
+                width: 100%;
+                @include container;
+                margin-block-end: 3rem;
+
+                .top-info {
+
+                    .section-subtitle {
+                        color: whitesmoke;
+                        font-size: 2.3rem;
+                    }
+
+                    .p-large {
+                        color: whitesmoke;
+                    }
+
+                    .cta-productos {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            @include container;
+            margin-block: 3rem;
+
+            .cards-container {
+
+                .cards-wrapper {
+
+                    .saas {
+                        grid-area: saas;
+                    }
+
+                    .banca {
+                        grid-area: banca;
+                    }
+
+                    .api {
+                        grid-area: api;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media only screen and (min-width: $tablet) {
+        #innovacion {
+
+            .top {
+                padding-block-start: 7rem;
+                height: auto;
+                background-image: linear-gradient(to left, #f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-innovacion-hombre-trabajando-laptop.jpg);
+
+                .top__container {
+
+                    .top-info {
+                        width: 50%;
+
+                        .p-large {
+                            margin-block-end: 2rem;
+                        }
+
+                        .cta-productos {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                .cards-container {
+
+                    // @include container;
+                    .cards-wrapper {
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        grid-template-rows: auto auto;
+                        grid-template-areas:
+                            "saas saas"
+                            "banca api"
+                        ;
+                        gap: 2rem;
+
+                        .saas {
+                            grid-area: saas;
+                        }
+
+                        .banca {
+                            grid-area: banca;
+                        }
+
+                        .api {
+                            grid-area: api;
+                        }
+
+                    }
+
+                    .cta-productos {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $laptop) {
+        #innovacion {
+
+            .top {
+                padding-block: 7rem;
+                height: auto;
+                background-image: linear-gradient(to left, #f2f2f225 40%, #5681e675 60%, ), url(../images/quanto-innovacion-hombre-trabajando-laptop.jpg);
+                background-position: 70% 40%;
+
+                .top__wrapper {
+                    width: 50%;
+                    height: 70%;
+                }
+            }
+
+            .bottom {
+
+                .cards-container {
+
+                    .cards-wrapper {
+                        grid-template-columns: repeat(3 auto);
+
+                        grid-template-areas:
+                            "saas banca api";
+                        gap: 2rem;
+
+                        .saas {
+                            grid-area: saas;
+                        }
+
+                        .banca {
+                            grid-area: banca;
+                        }
+
+                        .api {
+                            grid-area: api;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,91 @@
+#main-nosotros {
+
+    .nosotros-intro {
+       @include intro-container;
+       background-image: linear-gradient(to top, #202020cf, #33a2f279), url(../images/colleagues-giving-fist-bump.jpg);
+
+        .hero-info {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+
+            color: #f2f2f2cd;
+
+            .section-title {
+                color: #f2f2f2;
+            }
+
+            .p-large {
+                color: $clr-light-gray;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $tablet) {
+
+        .nosotros-intro {
+            margin-block-start: 2rem;
+            min-height: 50vh;
+            
+            
+            .section-title {
+                font-size: clamp(2rem, 4vw, 5rem);
+                    
+            }
+            .p-large {
+                width: 70%;
+                margin-inline-start: auto;
+                margin-inline-end: auto;
+            }
+                
+            .btn {
+                display: none;
+            }       
+        }
+    }
+
+    @media only screen and (min-width: $laptop) {
+        
+        .nosotros-intro {
+            
+            .p-large {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+}
+
+#main-nosotros {
+
+    #adn {
+        @include container;
+
+        .adn-title {
+            text-align: center;
+            margin-block-start:3rem;
+            margin-block-end:3rem;
+        }
+        .adn-cards {
+
+            .card {
+                padding-block-end: 1.5rem;
+            }
+        }
+    }
+
+    @media only screen and (min-width:$tablet) {
+
+        #adn {
+            @include container;
+            padding: 5rem 0 3rem;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 3rem;
+            .adn-title {
+                place-self: center;
+                text-align: center;
+            }
+        }
+    }
+}

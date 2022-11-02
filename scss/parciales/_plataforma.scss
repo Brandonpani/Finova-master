@@ -1,0 +1,349 @@
+#main-plataforma {
+    
+    .plataforma-intro {
+       @include intro-container;
+       background-image: linear-gradient(to top, #20202080, #33a2f27e), url(../images/plataforma_servidores_quanto_intro.jpg);
+        background-position: center;
+        background-size: cover;
+        // transform: translateY(30rem);
+
+        .plataforma-intro__container {
+            text-align: center;
+
+            .section-title {
+                color: #f2f3f4;
+                font-weight: 600;
+                font-size: 3rem;
+                line-height: 1.1;
+                margin-inline-start: auto;
+                margin-inline-end: auto;
+            }
+            .p-large {
+                color: $clr-light-gray;
+            }
+
+            .btn {
+                margin: 1rem 0;
+                padding: .5rem 1.5rem;
+            }
+        }
+    }
+    
+    @media (min-width: $tablet) {
+        .plataforma-intro {
+            margin-top: 2rem;
+            min-height: 50vh;
+
+            .plataforma-intro__container {
+                width: 70%;
+                margin-inline-start: auto;
+                margin-inline-end: auto;
+
+                .section-title {
+                    font-size: clamp(2rem, 4vw, 5rem);
+                }
+            }
+        }
+    }
+
+    @media (min-width: $laptop) {
+
+        .plataforma-intro {
+            
+
+            .plataforma-intro__container {
+                color: #f2f3f4;
+                text-align: center;
+                width: 60%;
+                margin: auto;
+
+                .title {
+                    color: #f2f3f4;
+                    font-size: clamp(2rem, 4vw, 5rem);
+                }
+
+                .p-large {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .btn {
+                display: none;
+            }
+        }
+    }
+}
+
+#main-plataforma {
+    #seguridad {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+        .info {
+            text-align: center;
+            .info-container {
+                @include container;
+
+                .credito-img {
+                    display: grid;
+                    place-items: center;
+                    margin: 2rem auto;
+
+                    .lap-credito {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        .cards {
+            @include container;
+            
+        }
+    }
+
+    @media (min-width: $laptop) {
+
+        #seguridad {
+            padding: 5rem 0;
+            @include container;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 3rem;
+
+            .info {
+                place-self: center;
+
+                .info-container {
+                    width: 100%;
+
+                    .title {
+                        text-align: center;
+                        font-size: 4rem;
+                    }
+
+                    .p-large {
+                        font-size: 1.25rem;
+                    }
+
+                    .credito-img {
+                        width: 100%;
+                        display: grid;
+                        place-content: center;
+
+                        .lap-credito {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .cards {
+
+                .subtitle {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+#main-plataforma {
+
+    .banner {
+        // text-align: center;
+     .p-large {
+         color: $clr-light-gray;
+     }   
+    }
+}
+
+#main-plataforma {
+    #rendimiento {
+        padding-top: 5rem;
+
+        .info {
+
+            .info-container {
+                @include container;
+                text-align: center;
+                .section-title {
+                    font-size: 3rem;
+                }
+                .credito-img {
+                    padding: 2rem;
+                    width: 100%;
+                    margin: auto;
+
+                    .lap-credito {
+                        margin: 0 auto;
+
+                    }
+                }
+            }
+        }
+
+        .cards {
+            @include container;
+        }
+
+    }
+
+    @media (min-width: $laptop) {
+
+        #rendimiento {
+
+            padding: 5rem 0 0;
+            @include container;
+            display: grid;
+            grid-template-rows: 1fr auto;
+            grid-template-areas:
+                "img"
+                "info"
+            ;
+
+            .info {
+                grid-row: 1;
+                grid-column: 1;
+                grid-area: img;
+
+                .info-container {
+                    width: 100%;
+                    min-height: 40vh;
+                    text-align: center;
+
+                    .title {
+                        font-size: 4rem;
+                    }
+
+                    .p-large {
+                        font-size: 1.25rem;
+                        width: 70%;
+                        margin-inline-start: auto;
+                        margin-inline-end: auto;
+                    }
+
+                    .credito-img {
+                        display: grid;
+                        place-items: center;
+
+                        .lap-credito {
+                            width: 60%;
+                        }
+
+                        // padding: 2rem;
+                    }
+                }
+            }
+
+            .cards {
+                grid-row: 2;
+                grid-column: 1;
+                grid-area: info;
+                place-self: center;
+
+                .cards-container {
+                    padding-block-start: 3rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2rem;
+                }
+
+                .title {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+#main-plataforma {
+    #nube {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+
+        .info {
+
+            .info-container {
+                @include container;
+                .section-title,
+                .p-large {
+                    text-align: center;
+                }
+                .credito-img {
+                    margin-block-start: 2rem;
+                    margin-block-end: 2rem;
+                    // outline: 1px solid red;
+                    
+                    .fig-cap {
+                        margin-block-start: .5rem;
+                        color: #6b6b6b;
+                    }
+                }
+            }
+        }
+
+        .cards {
+            @include container;
+        }
+
+    }
+
+    @media (min-width: $laptop) {
+
+        // media dasktop
+        #nube {
+            padding: 5rem 0;
+            @include container;
+            display: grid;
+            // grid-template-columns: 2fr 3fr;
+            gap: 3rem;
+
+            .info {
+                
+
+                .info-container {
+                    width: 100%;
+
+                    .title {
+                        text-align: center;
+                        font-size: 4rem;
+                    }
+
+                    .p-large {
+                        font-size: 1.25rem;
+                        width: 70%;
+                        margin-inline-start: auto;
+                        margin-inline-end: auto;
+
+                    }
+
+                    .credito-img {
+                        display: grid;
+                        place-items: center;
+                        padding: 0;
+                        margin: 2rem auto;
+                       
+
+                        .lap-credito {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+
+            .cards {
+                place-self: center;
+
+                .cards-container {
+                    display: flex;
+                    gap: 2rem;
+
+                }
+
+                .subtitle {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
