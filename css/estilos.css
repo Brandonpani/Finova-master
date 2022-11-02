@@ -1437,11 +1437,10 @@ form .selectBox .idiomas.active {
   width: 80%;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  color: #ff5403;
 }
 .banner .banner-content .banner-title .section-title {
   margin-block-end: 1rem;
-  color: #f2f2f2;
+  color: #efefef;
   font-size: 2.5rem;
 }
 @media only screen and (min-width: 768px) {

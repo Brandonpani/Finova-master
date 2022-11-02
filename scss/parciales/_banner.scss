@@ -22,11 +22,11 @@
             width: 80%;
             margin-inline-start: auto;
             margin-inline-end: auto;
-            color: $orange;
+            // color: $orange;
 
             .section-title {
                 margin-block-end: 1rem;
-                color: $clr-light-gray;
+                color: $light-gray;
                 font-size: 2.5rem;
 
                 @media only screen and (min-width:$tablet) {
